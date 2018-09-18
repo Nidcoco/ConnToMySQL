@@ -1,0 +1,16 @@
+PODS:
+  - OHMySQL (2.1.3)
+
+DEPENDENCIES:
+  - OHMySQL
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - OHMySQL
+
+SPEC CHECKSUMS:
+  OHMySQL: 8bc54d2b8b9e1acfa0e652b18856a9cdbb24c431
+
+PODFILE CHECKSUM: 3c386057aa731488ce15f5bf17f8cfd7a3919288
+
+COCOAPODS: 1.5.2
