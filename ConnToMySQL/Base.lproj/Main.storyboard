@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="lgd-FO-aP4"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WCd-5U-g2t"/>
                                 </connections>
                             </tableView>
                         </subviews>

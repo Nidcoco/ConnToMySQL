@@ -28,6 +28,14 @@
         OHMySQLUser *usr = [[OHMySQLUser alloc]initWithUserName:@"root" password:@"123456" serverName:@"localhost" dbName:@"IOS" port:3306 socket:nil];
         
         //初始化连接器
+        /*第一步：连接数据库
+        连接数据库的测试参数：
+        用户名：root
+        密码：123456
+        服务器域名：localhost
+        数据库名字:IOS
+        端口号:3306
+        */
         OHMySQLStoreCoordinator *coordinator = [[OHMySQLStoreCoordinator alloc]initWithUser:usr];
         
         //连接到数据库
@@ -39,7 +47,7 @@
         //设置连接器
         queryContext.storeCoordinator = coordinator;
         
-        //获取log表中的数据
+        //获取test表中的数据
         
         OHMySQLQueryRequest *query = [OHMySQLQueryRequestFactory SELECT:@"test" condition:nil orderBy:@[@"name"] ascending:NO];
         
@@ -56,6 +64,7 @@
                 [arrayModels addObject:model];
             }
                    _test = arrayModels;
+            [coordinator disconnect];
         }
         else
             NSLog(@"%@",error.description);
@@ -108,9 +117,9 @@
    */
     
     
-    LJYTest *test = self.test[1];
-    
-    NSLog(@"cnm,%@",test.name);
+//    LJYTest *test = self.test[1];
+//
+//    NSLog(@"cnm,%@",test.name);
     
     
 }
@@ -131,7 +140,7 @@
     
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     
-    cell.textLabel.text = test.name;
+    cell.textLabel.text = test.sex;
     
     return cell;
 }
